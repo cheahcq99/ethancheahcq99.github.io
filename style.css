@@ -20,16 +20,24 @@
 
 html{
     font-size: 62.5%;
-    overflow-x:hidden;
+    overflow-x: hidden;
+    width: 100%;
 }
+
 body{
-    background:var(--bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 section{
     min-height: 100vh;
-    padding: 10rem 9% 2rem ;
+    padding: 10rem 9% 2rem;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .header a{
@@ -59,6 +67,7 @@ section{
     font-weight: 600;
     cursor: default;
 }
+
 .navbar a{
     font-size: 1.7rem;
     color: var(--text-color);
@@ -76,12 +85,20 @@ section{
     color:var(--text-color);
     display: none;
 }
+
 .home{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 5rem;
+    width: 100%;
+    max-width: 100vw;
 }
+
+.home-content {
+    max-width: 100%;
+}
+
 .home-img img{
     width: 20vw;
     animation: floatImage 4s ease-in-out infinite;
@@ -106,12 +123,15 @@ section{
     font-size: 3.2rem;
     font-weight: 700;
 }
+
 .home-content h3:nth-of-type(2){
     margin-bottom: 2rem;
 }
+
 span{
     color: var(--main-color);
 }
+
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
@@ -121,8 +141,8 @@ span{
 .home-content p{
     font-size: 1.6rem;
     text-align: justify;
-
 }
+
 .social-media a{
     display: inline-flex;
     justify-content: center;
@@ -165,8 +185,10 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 5rem;
     background: var(--bg-color);
+    width: 100%;
+    max-width: 100vw;
 }
 
 .about-img img{
@@ -205,8 +227,9 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     gap: 2rem;
+    width: 100%;
 }
 
 .services-container .services-box{
@@ -239,7 +262,7 @@ span{
 }
 
 .portfolio {
-    background : var(--bg-color);
+    background: var(--bg-color);
 }
 
 .portfolio h2{
@@ -251,6 +274,7 @@ span{
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
+    width: 100%;
 }
 
 .portfolio-container .portfolio-box {
@@ -324,6 +348,7 @@ span{
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
+    width: 100%;
 }
 
 .contact form .input-box{
@@ -388,154 +413,6 @@ span{
     color: var(--second-bg-color);
 }
 
-/* BREAKPOINTS */
-@media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
-}
-
-@media (max-width: 991px) {
-    .header {
-        padding: 2rem 3%;
-    }
-
-    section {
-        padding: 10rem 3% 2rem;
-    }
-
-    .services{
-        padding-bottom: 7rem;
-    }
-
-    .portfolio{
-        padding-bottom: 7rem;
-    }
-
-    .contact{
-        min-height: auto;
-    }
-
-    .footer {
-        padding: 2rem 3%;
-    }
-}
-
-@media (max-width: 768px) {
-    #menu-icon {
-        display: block;
-    }
-
-    .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        display: none;
-    }
-
-    .navbar.active {
-        display: block;
-    }
-
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    .home {
-        flex-direction: column-reverse;
-        gap: 3rem;
-    }
-
-    .home-content h3{
-        font-size: 2.6rem;
-    }
-
-    .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .home-img img{
-        width: 40vw;
-        margin-top: 4rem;
-    }
-
-    .about{
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .about img{
-        width: 40vw;
-        margin-top: 4rem;
-    }
-
-    .services h2{
-        margin-bottom: 3rem;
-    }
-
-    .portfolio h2{
-        margin-bottom: 3rem;
-    }
-
-    .portfolio-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 617px){
-    .portfolio-container{
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 450px){
-    html{
-        font-size: 50%;
-    }
-
-    .contact form .input-box input{
-        width: 100%;
-    }
-}
-
-@media (max-width: 365px){
-
-    .home {
-        justify-content: center;
-    }
-
-    .home-content{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home-img img{
-        width: 45vw;
-    }
-
-    .about-img img{
-        width: 45vw;
-    }
-
-    .footer {
-        flex-direction: column-reverse;
-    }
-
-    .footer p{
-        text-align: center;
-        margin-top: 2rem;
-    }
-}
-
 /*Edu and Exp*/
 .education{
     display: flex;
@@ -554,6 +431,8 @@ span{
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .education-row .education-column {
@@ -596,7 +475,7 @@ span{
 
 .education-content .content::before{
     content: '';
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 0;
@@ -608,7 +487,6 @@ span{
 
 .education-content .content:hover::before{
     width: 100%;
-
 }
 
 .education-content .content .year{
@@ -627,7 +505,7 @@ span{
 
 .education-content .content h3 a{
     font-size: 2rem;
-    color:#0ef;
+    color: #0ef;
     text-decoration-line: underline;
 }
 
@@ -651,6 +529,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    width: 100%;
 }
 
 .skills-row .skills-column{
@@ -765,6 +644,7 @@ span{
     flex-direction: column;
     width: 100%;
     padding: 5rem 1rem;
+    overflow-x: hidden;
 }
 
 .testimonial-container .testimonial-wrapper{
@@ -772,6 +652,7 @@ span{
     max-width: 90rem;
     width: 100%;
     padding: 5rem;
+    overflow-x: hidden;
 }
 
 .testimonial-wrapper .testimonial-box{
@@ -798,7 +679,6 @@ span{
     object-fit: cover;
     border-radius: 50%;
     border: .5rem solid var(--bg-color);
-    /*outline: .5rem solid var(--main-color);*/
 }
 
 .testimonial-slide h3{
@@ -831,3 +711,192 @@ span{
 .testimonial-box .swiper-navigation-bullet-active{
     background: var(--main-color);
 }
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services{
+        padding-bottom: 7rem;
+    }
+
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 40vw;
+        margin-top: 4rem;
+    }
+
+    .about{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about img{
+        width: 40vw;
+        margin-top: 4rem;
+    }
+
+    .services h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-wrapper {
+        padding: 2rem 1rem;
+    }
+
+    .testimonial-content .testimonial-slide {
+        padding: 2rem 2rem;
+    }
+
+    .education .education-row {
+        gap: 3rem;
+    }
+
+    .skills .skills-row {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    section {
+        padding: 10rem 5% 2rem;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+
+    .testimonial-wrapper {
+        padding: 1rem;
+    }
+
+    .testimonial-content .testimonial-slide {
+        padding: 2rem 1rem;
+    }
+
+    .home {
+        gap: 2rem;
+    }
+
+    .about {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 365px){
+    .home {
+        justify-content: center;
+    }
+
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img{
+        width: 45vw;
+    }
+
+    .about-img img{
+        width: 45vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .testimonial-slide img {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
