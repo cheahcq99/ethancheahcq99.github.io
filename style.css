@@ -271,10 +271,19 @@ span{
 
 .portfolio-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
     align-items: center;
     gap: 2.5rem;
     width: 100%;
+}
+
+.portfolio-box img.diagram-thumb{
+    height: 320px;
+    object-fit: contain;
+    background: var(--bg-color);
+    padding: 1.5rem;
 }
 
 .portfolio-container .portfolio-box {
