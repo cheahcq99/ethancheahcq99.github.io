@@ -40,6 +40,7 @@
                 <a href="#about">About</a>
                 <a href="#education">Career</a>
                 <a href="#portfolio">Projects</a>
+                <a href="#credentials">Credentials</a>
                 <a href="#referee">Referee</a>
                 <a href="#contact">Contact</a>
                 <a href="ICMRES22_043-027_Full_paper_09Dec2022_231225_183045.pdf">Publications <i class='bx bx-link-external'></i></a>
@@ -184,24 +185,62 @@
             <h2 class="heading">Personal <span>Projects</span></h2>
 
             <div class="portfolio-container">
-                <div class="portfolio-box">
+                <a href="https://github.com/cheahcq99/retail-analytics-pipeline" target="_blank" class="portfolio-box">
                     <img src="project_retail_pipeline.png" class="diagram-thumb" alt="dbt lineage graph: bronze to silver to gold">
                     <div class="portfolio-layer">
                         <h4>Retail Analytics Pipeline</h4>
                         <p>End-to-end pipeline: Python &rarr; Airflow &rarr; dbt (bronze/silver/gold) &rarr; Postgres,
                         containerized with Docker. Same medallion architecture pattern used in production, on an open-source stack.</p>
-                        <a href="https://github.com/cheahcq99/retail-analytics-pipeline"><i class='bx bx-link-external' ></i></a>
+                        <span class="portfolio-cta">View on GitHub <i class='bx bx-link-external'></i></span>
                     </div>
-                </div>
-                <div class="portfolio-box">
+                </a>
+                <a href="https://github.com/cheahcq99/aws-serverless-retail-lakehouse" target="_blank" class="portfolio-box">
                     <img src="project_aws_lakehouse.svg" class="diagram-thumb" alt="AWS lakehouse architecture: S3 to Glue to Athena to dbt">
                     <div class="portfolio-layer">
                         <h4>AWS Serverless Retail Lakehouse</h4>
                         <p>S3 (Bronze/Silver) &rarr; AWS Glue &rarr; Athena &rarr; dbt (Gold), provisioned via Terraform,
                         orchestrated by Airflow. Same medallion pattern as Project 1, on real AWS-managed services.</p>
-                        <a href="https://github.com/cheahcq99/aws-serverless-retail-lakehouse"><i class='bx bx-link-external' ></i></a>
+                        <span class="portfolio-cta">View on GitHub <i class='bx bx-link-external'></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!--Credentials Section-->
+        <section class="credentials" id="credentials">
+            <h2 class="heading">Credentials</h2>
+
+            <h3 class="credentials-subheading">Certifications</h3>
+            <div class="cert-container">
+                <div class="cert-card">
+                    <i class='bx bxs-badge-check cert-icon'></i>
+                    <div class="cert-body">
+                        <h4>AWS Fundamentals Specialization</h4>
+                        <p class="cert-meta">Coursera &middot; 3 courses &middot; Dec 2023</p>
+                        <p class="cert-desc">AWS Cloud Technical Essentials, Migrating to the AWS Cloud, and Architecting Solutions on AWS.</p>
+                        <a href="https://coursera.org/verify/specialization/WMTV63PQJ9XX" target="_blank">Verify credential <i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
+                <div class="cert-card">
+                    <i class='bx bxs-badge-check cert-icon'></i>
+                    <div class="cert-body">
+                        <h4>SQL (Intermediate)</h4>
+                        <p class="cert-meta">HackerRank &middot; Dec 2023</p>
+                        <p class="cert-desc">Certificate of Accomplishment for passing the HackerRank SQL skill certification test.</p>
+                        <a href="https://www.hackerrank.com/certificates/cf3f218bf482" target="_blank">Verify credential <i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="credentials-subheading">Recommendation</h3>
+            <div class="recommendation-card">
+                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                <p class="recommendation-quote">Ethan's analytical skills, attention to detail, and ability to work
+                    effectively across functional teams globally have been invaluable to our organisation. He
+                    consistently demonstrated a strong work ethic and a collaborative spirit, making him a respected
+                    and valued member of our team.</p>
+                <p class="recommendation-attribution">&mdash; Nick Vallas, Managing Director, Turnkey Consulting Malaysia Sdn Bhd</p>
+                <a href="Recommendation_Letter_Nick_Vallas.pdf" target="_blank" class="btn recommendation-btn">Read full letter</a>
             </div>
         </section>
 
