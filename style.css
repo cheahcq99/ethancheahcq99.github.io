@@ -470,7 +470,7 @@ span{
 
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
@@ -479,25 +479,6 @@ span{
 
 .footer-text p{
     font-size: 1.6rem;
-}
-
-.footer-iconTop a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: var(--main-color);
-    border-radius: .8rem;
-    transition: .5s ease;
-}
-
-.footer-iconTop a:hover{
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-.footer-iconTop a i {
-    font-size: 2.4rem;
-    color: var(--second-bg-color);
 }
 
 /*Edu and Exp*/
@@ -868,6 +849,10 @@ span{
         gap: 3rem;
     }
 
+    .home-content{
+        text-align: center;
+    }
+
     .home-content h3{
         font-size: 2.6rem;
     }
@@ -1120,5 +1105,93 @@ span{
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+}
+
+/* ===== Skills showcase (Apple-style minimal icon grid) ===== */
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    gap: 1rem;
+}
+
+.skill-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 3rem 1rem;
+    border-radius: 1.6rem;
+    transition: .35s cubic-bezier(.2, .8, .2, 1);
+}
+
+.skill-item:hover{
+    background: var(--second-bg-color);
+    transform: translateY(-.6rem);
+}
+
+.skill-item img{
+    width: 4.8rem;
+    height: 4.8rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0 transparent);
+    transition: .35s ease;
+}
+
+.skill-item:hover img{
+    filter: drop-shadow(0 .4rem 1.2rem rgba(212, 175, 55, .35));
+    transform: scale(1.08);
+}
+
+.skill-item span{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--silver);
+    text-align: center;
+    letter-spacing: .02rem;
+    transition: .3s ease;
+}
+
+.skill-item:hover span{
+    color: var(--text-color);
+}
+
+@media (max-width: 617px){
+    .skills-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: .5rem;
+    }
+    .skill-item{
+        padding: 2rem .5rem;
+    }
+    .skill-item img{
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+}
+
+.skill-badge{
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .8rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: .02rem;
+}
+
+@media (max-width: 617px){
+    .skill-badge{
+        width: 3.8rem;
+        height: 3.8rem;
+        font-size: 1rem;
+        border-radius: .6rem;
     }
 }
